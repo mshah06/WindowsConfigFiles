@@ -62,12 +62,12 @@ Configuration CIS_Benchmark_WindowsServer2019_v100 {
             # CceId: CCE-36534-6
             # DataSource: Security Policy
             # Ensure 'Minimum password length' is set to '14 or more character'
-            Minimum_Password_Length                     = '14'
+            Minimum_Password_Length                     = '10'
 
             # CceId: CCE-37073-4
             # DataSource: Security Policy
             # Ensure 'Minimum password age' is set to '1 or more day'
-            Minimum_Password_Age                        = '2'
+            Minimum_Password_Age                        = '7'
 
             # CceId: CCE-37166-6
             # DataSource: Security Policy
@@ -77,7 +77,7 @@ Configuration CIS_Benchmark_WindowsServer2019_v100 {
             # CceId: CCE-37167-4
             # DataSource: Security Policy
             # Ensure 'Maximum password age' is set to '70 or fewer days, but not 0'
-            Maximum_Password_Age                        = '50'
+            Maximum_Password_Age                        = '90'
         }
 
         # CceId: CCE-38325-7
