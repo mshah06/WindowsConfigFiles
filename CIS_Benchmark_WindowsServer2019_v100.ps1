@@ -610,7 +610,7 @@ Configuration CIS_Benchmark_WindowsServer2019_v100 {
         # CceId: CCE-36056-0
         # DataSource: Registry Policy
         # Ensure 'Interactive logon: Do not display last user name' is set to 'Enabled'
-        # Interactive_logon_Do_not_display_last_user_name                                                                 = 'Enabled'
+        Interactive_logon_Do_not_display_last_user_name                                                                 = 'Enabled'
         
         # CceId: CCE-37637-6
         # DataSource: Registry Policy
@@ -739,7 +739,7 @@ Configuration CIS_Benchmark_WindowsServer2019_v100 {
         # CceId: 
         # DataSource: Registry Policy
         # Ensure 'Devices: Allow undock without having to log on' is set to 'Enabled'
-        # Devices_Allow_undock_without_having_to_log_on                                                = 'Disabled'
+        Devices_Allow_undock_without_having_to_log_on                                                = 'Disabled'
 
         # CceId: CCE-37701-0
         # DataSource: Registry Policy
@@ -773,13 +773,13 @@ Configuration CIS_Benchmark_WindowsServer2019_v100 {
         # CceId: 
         # DataSource: Registry Policy
         # Ensure 'Network access: Restrict clients allowed to make remote calls to SAM' is set to 'Administrators: Remote Access: Allow' (MS only)
-        <#Registry 'RestrictRemoteSam' {
+        Registry 'RestrictRemoteSam' {
             Ensure    = 'Present'
             Key       = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa'
             ValueName = 'RestrictRemoteSam'
             ValueType = 'DWord'
             ValueData = 'O:BAG:BAD:(A  RC   BA)'
-        }#>
+        }
 
         # CceId: 
         # DataSource: Registry Policy
